@@ -2,7 +2,6 @@
 
 using Final_Project.Data;
 using Final_Project.Helper;
-using Final_Project.Helper;
 using Final_Project.Models;
 using Final_Project.ViewModels.Brand;
 using Microsoft.AspNetCore.Hosting;
@@ -81,7 +80,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             string fileName = Guid.NewGuid().ToString() + "_" + brand.Photo.FileName;
 
-            string path = Helpers.GetFilePath(_env.WebRootPath,
+            string path = Helper.Helpers.GetFilePath(_env.WebRootPath,
                 "assets/img/Brand",
                 fileName);
 
@@ -165,7 +164,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
                         return RedirectToAction(nameof(Index));
                     }
 
-                    string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/Brand", fileName);
+                    string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/Brand", fileName);
                     using (FileStream stream = new FileStream(path, FileMode.Create))
                     {
                         await brand.Photo.CopyToAsync(stream);
@@ -198,10 +197,10 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             if (brand == null) return NotFound();
 
-            string path = Helpers.GetFilePath(_env.WebRootPath, "img", brand.Image);
+            string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "img", brand.Image);
 
 
-            Helpers.DeleteFile(path);
+            Helper.Helpers.DeleteFile(path);
 
             _context.Brands.Remove(brand);
 

@@ -376,3 +376,8 @@ C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\obj\Debug\netcorea
 C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\obj\Debug\netcoreapp3.1\Razor\Views\About\Index.cshtml.g.cs
 C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
 C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\obj\Debug\netcoreapp3.1\Razor\Views\BlogDetail\Index.cshtml.g.cs
+C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\obj\Debug\netcoreapp3.1\Razor\Views\Account\VerifyEmail.cshtml.g.cs
+C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\obj\Debug\netcoreapp3.1\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs

@@ -106,9 +106,9 @@ namespace Final_Project.Areas.AdminArea.Controllers
             {
                 string fileName = Guid.NewGuid().ToString() + "_" + photo.FileName;
 
-                string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/Product", fileName);
+                string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/Product", fileName);
 
-                await Helpers.SaveFile(path, photo);
+                await Helper.Helpers.SaveFile(path, photo);
 
 
                 ProductImage image = new ProductImage
@@ -174,8 +174,8 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             foreach (var item in product.ProductImage)
             {
-                string path = Helpers.GetFilePath(_env.WebRootPath, "img", item.Image);
-                Helpers.DeleteFile(path);
+                string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "img", item.Image);
+                Helper.Helpers.DeleteFile(path);
                 item.IsDeleted = true;
             }
 
@@ -302,8 +302,8 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
                 foreach (var item in dbProduct.ProductImage)
                 {
-                    string path = Helpers.GetFilePath(_env.WebRootPath, "img", item.Image);
-                    Helpers.DeleteFile(path);
+                    string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "img", item.Image);
+                    Helper.Helpers.DeleteFile(path);
                 }
 
 
@@ -314,9 +314,9 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
                     string fileName = Guid.NewGuid().ToString() + "_" + photo.FileName;
 
-                    string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/product", fileName);
+                    string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/product", fileName);
 
-                    await Helpers.SaveFile(path, photo);
+                    await Helper.Helpers.SaveFile(path, photo);
 
 
                     ProductImage image = new ProductImage

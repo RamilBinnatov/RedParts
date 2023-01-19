@@ -112,7 +112,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
                         return RedirectToAction(nameof(Index));
                     }
 
-                    string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/Employee", fileName);
+                    string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/Employee", fileName);
                     using (FileStream stream = new FileStream(path, FileMode.Create))
                     {
                         await employee.Photo.CopyToAsync(stream);
@@ -167,7 +167,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             string fileName = Guid.NewGuid().ToString() + "_" + employee.Photo.FileName;
 
-            string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/Employee", fileName);
+            string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/Employee", fileName);
 
             using (FileStream stream = new FileStream(path, FileMode.Create))
             {
@@ -196,10 +196,10 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             if (employee == null) return NotFound();
 
-            string path = Helpers.GetFilePath(_env.WebRootPath, "img", employee.Image);
+            string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "img", employee.Image);
 
 
-            Helpers.DeleteFile(path);
+            Helper.Helpers.DeleteFile(path);
 
             _context.Employees.Remove(employee);
 

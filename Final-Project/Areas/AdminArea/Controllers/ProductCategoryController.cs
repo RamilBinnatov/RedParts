@@ -78,7 +78,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             string fileName = Guid.NewGuid().ToString() + "_" + category.Photo.FileName;
 
-            string path = Helpers.GetFilePath(_env.WebRootPath,
+            string path = Helper.Helpers.GetFilePath(_env.WebRootPath,
                 "assets/img/ProductCategory",
                 fileName);
 
@@ -162,7 +162,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
                         return RedirectToAction(nameof(Index));
                     }
 
-                    string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/ProductCategory", fileName);
+                    string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/ProductCategory", fileName);
                     using (FileStream stream = new FileStream(path, FileMode.Create))
                     {
                         await category.Photo.CopyToAsync(stream);
@@ -195,10 +195,10 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             if (category == null) return NotFound();
 
-            string path = Helpers.GetFilePath(_env.WebRootPath, "img", category.Image);
+            string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "img", category.Image);
 
 
-            Helpers.DeleteFile(path);
+            Helper.Helpers.DeleteFile(path);
 
             _context.ProductCategories.Remove(category);
 

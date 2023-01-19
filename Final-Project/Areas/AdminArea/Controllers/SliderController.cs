@@ -113,7 +113,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
                         return RedirectToAction(nameof(Index));
                     }
 
-                    string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/Slider", fileName);
+                    string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/Slider", fileName);
                     using (FileStream stream = new FileStream(path, FileMode.Create))
                     {
                         await slider.Photo.CopyToAsync(stream);
@@ -169,7 +169,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             string fileName = Guid.NewGuid().ToString() + "_" + slider.Photo.FileName;
 
-            string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/Slider", fileName);
+            string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/Slider", fileName);
 
             using (FileStream stream = new FileStream(path, FileMode.Create))
             {
@@ -199,10 +199,10 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             if (slider == null) return NotFound();
 
-            string path = Helpers.GetFilePath(_env.WebRootPath, "img", slider.Image);
+            string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "img", slider.Image);
 
 
-            Helpers.DeleteFile(path);
+            Helper.Helpers.DeleteFile(path);
 
             _context.Sliders.Remove(slider);
 

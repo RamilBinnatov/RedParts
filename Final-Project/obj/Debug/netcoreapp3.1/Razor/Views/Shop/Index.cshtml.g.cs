@@ -40,8 +40,15 @@ using Final_Project.ViewModels.Page;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\Views\_ViewImports.cshtml"
+using Final_Project.ViewModels.Account;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f281b50f0a53e5127f79cef035f1a846ab402e19", @"/Views/Shop/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"03f488937af20fb7ea4a5782da9dbc80cd9a655c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d0cf4ca5c7ab08cba79a42a0abc9927e646d3c50", @"/Views/_ViewImports.cshtml")]
     public class Views_Shop_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Paginate<ShopVM>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "shop", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -120,7 +127,7 @@ using Final_Project.ViewModels.Page;
 #line hidden
 #nullable disable
             WriteLiteral("                                            <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f281b50f0a53e5127f79cef035f1a846ab402e196847", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f281b50f0a53e5127f79cef035f1a846ab402e197056", async() => {
 #nullable restore
 #line 33 "C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\Views\Shop\Index.cshtml"
                                                                                                                      Write(Html.Raw(brand.Name));
@@ -210,7 +217,7 @@ using Final_Project.ViewModels.Page;
 #line hidden
 #nullable disable
             WriteLiteral("                                            <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f281b50f0a53e5127f79cef035f1a846ab402e1911349", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f281b50f0a53e5127f79cef035f1a846ab402e1911558", async() => {
 #nullable restore
 #line 57 "C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\Views\Shop\Index.cshtml"
                                                                                                                       Write(Html.Raw(category.Name));
@@ -299,7 +306,7 @@ using Final_Project.ViewModels.Page;
 #line hidden
 #nullable disable
             WriteLiteral("                                            <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f281b50f0a53e5127f79cef035f1a846ab402e1915837", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f281b50f0a53e5127f79cef035f1a846ab402e1916046", async() => {
 #nullable restore
 #line 80 "C:\Users\ASUS\Desktop\Projects\FinalProject-Eli\Final-Project\Views\Shop\Index.cshtml"
                                                                                                                     Write(Html.Raw(country.Name));
@@ -397,9 +404,9 @@ using Final_Project.ViewModels.Page;
                                         <button><i class=""fa-solid fa-heart""></i></button>
                                     </div>
                                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f281b50f0a53e5127f79cef035f1a846ab402e1920570", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f281b50f0a53e5127f79cef035f1a846ab402e1920779", async() => {
                 WriteLiteral("\r\n                                        <div class=\"box-img\">\r\n                                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "f281b50f0a53e5127f79cef035f1a846ab402e1920937", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "f281b50f0a53e5127f79cef035f1a846ab402e1921146", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

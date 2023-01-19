@@ -103,7 +103,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             string fileName = Guid.NewGuid().ToString() + "_" + blog.Photo.FileName;
 
-            string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/blog", fileName);
+            string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/blog", fileName);
 
             using (FileStream stream = new FileStream(path, FileMode.Create))
             {
@@ -218,7 +218,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
                         return RedirectToAction(nameof(Index));
                     }
 
-                    string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/blog", fileName);
+                    string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/blog", fileName);
                     using (FileStream stream = new FileStream(path, FileMode.Create))
                     {
                         await blog.Photo.CopyToAsync(stream);

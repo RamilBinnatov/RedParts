@@ -112,7 +112,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
                         return RedirectToAction(nameof(Index));
                     }
 
-                    string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/Banner", fileName);
+                    string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/Banner", fileName);
                     using (FileStream stream = new FileStream(path, FileMode.Create))
                     {
                         await banner.Photo.CopyToAsync(stream);
@@ -167,7 +167,7 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             string fileName = Guid.NewGuid().ToString() + "_" + banner.Photo.FileName;
 
-            string path = Helpers.GetFilePath(_env.WebRootPath, "assets/img/Banner", fileName);
+            string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "assets/img/Banner", fileName);
 
             using (FileStream stream = new FileStream(path, FileMode.Create))
             {
@@ -196,10 +196,10 @@ namespace Final_Project.Areas.AdminArea.Controllers
 
             if (banner == null) return NotFound();
 
-            string path = Helpers.GetFilePath(_env.WebRootPath, "img", banner.Image);
+            string path = Helper.Helpers.GetFilePath(_env.WebRootPath, "img", banner.Image);
 
 
-            Helpers.DeleteFile(path);
+            Helper.Helpers.DeleteFile(path);
 
             _context.Banners.Remove(banner);
 
